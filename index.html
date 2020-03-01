@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <!--Meta Information, Style Sheets, Scripts, Font Awesome, Font Family Starts from Here-->
+ <meta charset="utf-8" />
+ <title>Upwork-Talent on Demand Custom </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <meta name="keywords" content="Upwork Navigation" />
+ <meta name="description" content="This is custom upwork navigation created by Md Choyon Mia" />
+ <meta name="author" content="Md Choyon Mia" />
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/all.min.css" />
+ <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css" />
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="css/style.css" />
+ <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16" />
+ <!--Meta Information, Style Sheets, Scripts, Font Awesome, Font Family Ends Here-->
+</head>
+<body>
+<!--Header Navigation Starts From Here-->
+<div class="topNav" id="myMain">
+ <nav class="topNavContainer">
+  <a href="#" id="brand"><img src="images/upw.JPG" alt="Upwork Logo" /></a>
+  <form action="#" method="post" id="fm">
+   <input type="text" id="input1" value="" name="search" placeholder="Find Professionsal & Agencies" />
+   <button type="submit">
+    <i class="fas fa-search"></i>
+   </button>
+   <a href="javascript:void(0)" id="fAng">
+    <i class="fas fa-angle-down"></i>
+   </a>
+   <div class="fAngD">
+    <a href="javscript:void(0)" class="fAngDI dclose">Professionals & Agencies</a>
+    <a href="javscript:void(0)" class="fAngDIT dclose">Jobs</a>
+   </div>
+  </form>
+  <div class="linkBlock">
+   <div class="dropDc">
+    <a href="#">SOLUTIONS</a>
+	<div class="dropdMenu">
+     <h6>BUSINESS SIZE</h6>
+     <a class="dropdItem" href="#">10-100 Employees</a>
+     <a class="dropdItem" href="#">100-1000 Employees</a>
+     <a class="dropdItem" href="#">1000+ Employees</a>
+     <hr />
+     <h6>DEPARTMENT</h6>
+     <a class="dropdItem" href="#">Marketing</a>
+     <a class="dropdItem" href="#">Operations</a>
+     <a class="dropdItem" href="#">Engineering</a>
+    </div>
+   </div>
+   <a href="#">LOG IN</a>
+   <a href="#">SIGN UP</a>
+   <a href="#" id="job">Post a Job</a>
+  </div>
+ </nav>
+ <div class="container-fluid smallNav">
+  <div class="row">
+   <div class="col-3">
+    <a href="javascript:void(0)" onclick="openOver()">
+     <i class="fas fa-bars"></i>
+    </a>
+   </div>
+   <div class="col-6">
+    <a href="#">
+     <img src="images/upw.jpg" alt="Upwork Logo" />
+    </a>
+   </div>
+   <div class="col-3" style="text-align:right;">
+    <a href="javascript:void(0)" onclick="openSmall()" style="font-size:20px; line-height:20px;" id="bOne">
+     <i class="fas fa-search"></i>
+    </a>
+   </div>
+  </div>
+ </div>
+</div>
+<!--Header Navigation Ends Here-->
+<!--Responsive Viewport Search Bar Starts From Here-->
+<div class="smallSearch" id="smallTwo">
+ <form>
+  <input type="text" id="input2" name="smallSearch" placeholder="Find Professionsal & Agencies" />
+  <button type="submit">
+   <i class="fas fa-search"></i>
+  </button>
+  <a href="javascript:void(0)" id="fAngT">
+   <i class="fas fa-angle-down"></i>
+  </a>
+  <div class="fAngDT">
+   <a href="javascript:void(0)" class="fAngDTI dclose2">Professionals & Agencies</a>
+   <a href="javascript:void(0)" class="fAngDTII dclose2">Jobs</a>
+  </div>
+  <a href="javascript:void(0)" id="cOne" onclick="closeSmall()">
+   <i class="material-icons">close</i>
+  </a>
+ </form>
+</div>
+<!--Responsive Viewport Search Bar Ends Here-->
+<!--FullScreen Overlay Starts From Here-->
+<div class="fullScreen" id="myFull">
+ <div class="fullInner">
+  <a href="#">
+   <img src="images/upw.jpg" alt="Upwork Logo" />
+  </a>
+  <a href="javascript:void(0)" id="overClose" onclick="closeOver()">
+   <i class="material-icons">close</i>
+  </a>
+ </div>
+ <form action="#" method="post">
+  <input type="text" id="input3" name="search" placeholder="Find Professional & Agencies" />
+  <button type="submit">
+   <i class="fas fa-search"></i>
+  </button>
+  <a href="javascript:void(0)" id="ovrSear">
+   <i class="fas fa-angle-down"></i>
+  </a>
+  <div class="ovrBlock" id="ovrC">
+   <a href="javascript:void(0)" id="ovrB" class="dclose3">Professionals & Agencies</a>
+   <a href="javascript:void(0)" class="in3 dclose3">Jobs</a>
+  </div>
+ </form>
+ <div class="row ovrRow">
+  <div class="col fCol">
+   <a href="#" style="margin-top:10px;">LOG IN</a>
+   <a href="#">SIGN UP</a>
+   <div class="ovrDrop" id="compli">
+    <a href="javascript:void(0)">SOLUTIONS <i class="fas fa-angle-down" id="fl"></i></a>
+	<div class="ovrDropC">
+	 <h6>Business Size</h6>
+	 <a href="#">10-100 Employees</a>
+	 <a href="#">100-1000 Employees</a>
+	 <a href="#">1000+ Employees</a>
+	 <h6>Department</h6>
+	 <a href="#">Marketing</a>
+	 <a href="#">Operations</a>
+	 <a href="#" style="margin-bottom:15px;">Engineering</a>
+	</div>
+   </div>
+   <a href="#">ABOUT US</a>
+   <a href="#">CONTACT US</a>
+   <a href="#" style="border-bottom:1px solid #e0e0e0;">CAREERS</a>
+  </div>
+  <div class="col sCol">
+   <h5>SOLUTIONS</h5>
+   <div class="ovrDropC">
+	 <h6 style="padding-top:0px;">Business Size</h6>
+	 <a href="#">10-100 Employees</a>
+	 <a href="#">100-1000 Employees</a>
+	 <a href="#">1000+ Employees</a>
+	 <h6>Department</h6>
+	 <a href="#">Marketing</a>
+	 <a href="#">Operations</a>
+	 <a href="#" style="border-bottom:1px solid #e0e0e0; padding-bottom:20px;">Engineering</a>
+	</div>
+  </div>
+ </div>
+ <div class="bFix" id="bFex">
+  <a href="#">Post a Job</a>
+ </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,956 @@
+* {
+ box-sizing:border-box;
+ margin:0px;
+ padding:0px;
+}
+
+@font-face {
+ font-family:"Gotham SSm";
+ src:url("../fonts/GothamBook.ttf");
+}
+
+body {
+ margin:0px;
+ padding:0px;
+ font-family: "Gotham SSm", Helvetica, Arial, sans-serif;
+}
+
+/*=================================Navigation Styles Starts From Here===================*/
+
+.topNav {
+ background-color:white;
+ border-bottom:1px solid #e0e0e0;
+ z-index:9999;
+ box-shadow:0px -1px 6px rgba(57,73,76,.85);
+ position:fixed;
+ top:0px;
+ left:0px;
+ right:0px;
+ width:100%;
+ transition:0.3s; 
+}
+
+.topNav .topNavContainer {
+ max-width:1170px;
+ margin:auto;
+ padding:0px 15px;
+}
+
+.topNav .topNavContainer #brand {
+ padding:0px;
+ margin:18px 0px 17px;
+ display:inline-block;
+}
+
+.topNav .topNavContainer #brand img{
+ width:106px;
+ height:35px;
+ margin:0px 5px 0px 0px;
+ padding:0px 0px;
+}
+
+.topNav .topNavContainer #fm {
+ display:inline;
+ margin:0px;
+ padding:0px;
+ position:relative;
+}
+
+.topNav .topNavContainer #fm input {
+ width:320px;
+ margin:0px;
+ padding:12px 19px 12px 45px;
+ border:none;
+ outline:none;
+ border:1px solid #e0e0e0;
+ font-size:12px;
+ line-height:12px;
+ letter-spacing:1px;
+ font-weight:bold;
+ color:#9a9a9a;
+ transition:0.4s;
+ border-top-right-radius:2px;
+ border-bottom-right-radius:2px;
+}
+
+.topNav .topNavContainer #fm input::placeholder {
+ font-size:12px;
+ line-height:12px;
+ color:#9a9a9a;
+ font-weight:bold;
+}
+
+.topNav .topNavContainer #fm input:hover {
+ box-shadow:inset 0 0 5px rgba(0,0,0,.3);
+ border-color:#008329;
+}
+
+.topNav .topNavContainer #fm input:focus {
+ box-shadow:inset 0 0 5px rgba(0,0,0,.3);
+ border-color:#008329;
+}
+
+.topNav .topNavContainer #fm  button {
+ border:none;
+ outline:none;
+ background-color:white;
+ font-size:14px;
+ line-height:14px;
+ position:absolute;
+ top:5px;
+ left:10px;
+ color:#39a102;
+ font-weight:normal;
+}
+
+.topNav .topNavContainer #fm #fAng {
+ margin:0px 0px;
+ padding:0px 0px;
+ font-size:14px;
+ line-height:14px;
+ font-weight:normal;
+ color:#39a102;
+ position:absolute;
+ top:4px;
+ left:27px;
+}
+
+.topNav .topNavContainer #fm #fAng:hover {
+ text-decoration:none;
+ color:#39a102;
+}
+
+.topNav .topNavContainer #fm .fAngD {
+ padding:8px 0px;
+ background-color:white;
+ width:320px;
+ display:inline-block;
+ position:absolute;
+ top:33px;
+ left:0px;
+ box-shadow:0 6px 12px rgba(0,0,0,.175);
+ margin-bottom:5px;
+ z-index:9999;
+ border-bottom-left-radius:4px;
+ border-bottom-right-radius:4px;
+ display:none;
+}
+
+.topNav .topNavContainer #fm .fAngD a {
+ text-decoration:none;
+ padding:10px 20px;
+ display:block;
+ font-size:12px;
+ line-height:14px;
+ font-weight:bold;
+ color:#37a000;
+ letter-spacing:1px;
+ background-color:white;
+ transition:0.4s;
+ border-left:3px solid transparent;
+}
+
+.topNav .topNavContainer #fm .fAngD .fAngDI {
+ border-left:3px solid #37a000;
+}
+
+.topNav .topNavContainer #fm .fAngD:hover .fAngDI {
+ border-left:3px solid transparent;
+}
+
+.topNav .topNavContainer #fm .fAngD .fAngDI:hover {
+ border-left:3px solid #37a000;
+}
+
+.topNav .topNavContainer #fm .fAngD a:hover {
+ text-decoration:none;
+ display:block;
+ background-color:#f9f9f9;
+ color:#37a000;
+ border-left:3px solid #37a000;
+}
+
+.topNav .topNavContainer .linkBlock {
+ display:inline-block;
+ float:right;
+}
+
+.topNav .topNavContainer .linkBlock a {
+ text-decoration:none;
+ display:inline-block;
+ border:none;
+ outline:none;
+ font-size:12px;
+ font-weight:bold;
+ line-height:12px;
+ margin:28px 0px;
+ padding:0px 17px;
+ color:#666666;
+ letter-spacing:1px;
+ transition:0.5s;
+}
+
+.topNav .topNavContainer .linkBlock a:hover {
+ text-decoration:none;
+ display:inline-block;
+ color:#37a000;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc {
+ position:relative;
+ display:inline-block;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc .dropdMenu {
+ position:absolute;
+ top:60px;
+ left:0px;
+ background-color:white;
+ box-shadow:0px 1px 6px rgba(57,73,76,.35);
+ min-width:250px;
+ z-index:9;
+ padding:25px 0px;
+ border-radius:3px;
+ display:none;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc .dropdMenu h6 {
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ color:black;
+ letter-spacing:1px;
+ padding:5px 20px;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc .dropdMenu a {
+ text-decoration:none;
+ display:block;
+ text-align:left;
+ font-size:12px;
+ line-height:12px;
+ color:#222;
+ padding:10px 20px;
+ transition:0.3s;
+ margin:0px;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc .dropdMenu a:hover {
+ text-decoration:none;
+ background-color:#f9f9f9;
+ color:#37a000;
+ border-left:4px solid #37a000;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc .dropdMenu hr {
+ margin:9px 0px 12px;
+ padding:0px;
+}
+
+.topNav .topNavContainer .linkBlock .dropdMenu::after {
+  content: " ";
+  position: absolute;
+  top: -21px;
+  left: 13%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgba(57,73,76,.15) transparent;
+}
+
+.topNav .topNavContainer .linkBlock .dropDc:hover .dropdMenu {
+ display:block;
+}
+
+.topNav .topNavContainer #job {
+ background-color:#37a000;
+ color:white;
+ padding:9px 18px 9px;
+ margin:0px 0px 0px 20px;
+ border-radius:2px;
+ transition:0.5s;
+ line-height:12px;
+}
+
+.topNav .topNavContainer #job:hover {
+ box-shadow:0px -1px 10px rgba(57,73,76,.85);
+}
+
+
+
+
+.topNav .smallNav {
+ padding:0px 15px;
+ display:none;
+}
+
+.topNav .smallNav .col-3 {
+ padding:11.5px 0px;
+ margin:0px;
+ text-align:left;
+}
+
+.topNav .smallNav .col-3 a {
+ text-decoration:none;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ font-size:23px;
+ line-height:23px;
+ color:#666;
+ margin-top:5px; 
+}
+
+.topNav .smallNav .col-3 a i{
+ font-weight:bold;
+}
+
+.topNav .smallNav .col-3 a:hover {
+ text-decoration:none;
+ display:inline-block;
+ color:#666;
+}
+
+.topNav .smallNav .col-6 {
+ padding:11.5px 0px;
+ margin:0px;
+ text-align:center;
+}
+
+.topNav .smallNav .col-6 a {
+ text-decoration:none;
+ display:inline-block;
+ padding:0px;
+ margin:0px;
+}
+
+.topNav .smallNav .col-6 a img {
+ width:106px;
+ height:30px;
+ display:inline-block;
+ border:none;
+}
+
+
+.smallSearch {
+ position:absolute;
+ top:0px;
+ right:0px;
+ padding:0px 0px;
+ width:0%;
+ overflow:hidden;
+ transition:0.3s;
+ float:right;
+ background-color:white;
+ z-index:9999;
+}
+
+.smallSearch form {
+ position:relative;
+}
+
+.smallSearch form input {
+ width:100%;
+ margin:0px;
+ padding:0px;
+ border:none;
+ outline:none;
+ background-color:transparent;
+ padding:16.5px 35px 16.5px 50px;
+ font-size:12px;
+ font-weight:bold;
+ line-height:22px;
+ letter-spacing:1px;
+}
+
+.smallSearch form input::placeholder {
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ letter-spacing:1px;
+}
+
+.smallSearch form button {
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ border:none;
+ outline:none;
+ position:absolute;
+ top:20px;
+ left:15px;
+ font-size:16px;
+ line-height:16px;
+ color:#6fda44;
+ background-color:transparent;
+}
+
+.smallSearch form #fAngT {
+ text-decoration:none;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ font-size:14px;
+ font-weight:bold;
+ line-height:14px;
+ color:#6fda44;
+ position:absolute;
+ top:20px;
+ left:35px;
+}
+
+.smallSearch form #fAngT:hover {
+ text-decoration:none;
+ display:inline-block;
+ color:#6fda44;
+}
+
+.smallSearch form .fAngDT {
+ display:block;
+ padding:7px 0px;
+ margin:0px 0px 7px;
+ width:96%;
+ position:absolute;
+ top:55px;
+ left:2%;
+ right:2%;
+ box-shadow:0 6px 12px rgba(0,0,0,.175);
+ display:none;
+}
+
+.smallSearch form .fAngDT a {
+ text-decoration:none;
+ display:block;
+ margin:0px;
+ padding:10px 20px;
+ font-size:12px;
+ font-weight:bold;
+ line-height:12px;
+ letter-spacing:1px;
+ color:#6fda44;
+ border-left:3px solid transparent;
+ transition:0.4s;
+ background-color:white;
+}
+
+.smallSearch form .fAngDT .fAngDTI {
+ border-left:3px solid #6fda44;
+}
+
+.smallSearch form .fAngDT:hover .fAngDTI {
+ border-left:3px solid transparent;
+}
+
+.smallSearch form .fAngDT .fAngDTI:hover {
+ border-left:3px solid #6fda44;
+}
+
+.smallSearch form .fAngDT a:hover {
+ text-decoration:none;
+ display:block;
+ background-color:#f9f9f9;
+ border-left:3px solid #6fda44;
+}
+
+.smallSearch form #cOne {
+ text-decoration:none;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ position:absolute;
+ top:16px;
+ right:15px;
+ color:#6fda44;
+}
+
+.smallSearch form #cOne i {
+ font-size:20px;
+ line-height:20px;
+ font-weight:bold;
+} 
+
+@media screen and (min-width:992px) {
+ .smallSearch {
+  display:none;
+ }
+}
+
+@media screen and (max-width:425px) {
+ .smallSearch form .fAngDT {
+ width:100%;
+ position:absolute;
+ top:55px;
+ left:0px;
+ right:0px;
+}
+
+.smallSearch form input {
+ letter-spacing:0px;
+}
+
+.smallSearch form input::placeholder {
+ letter-spacing:0px;
+}
+}
+
+@media screen and (max-width:375px) {
+ .smallSearch form #cOne {
+ position:absolute;
+ top:17px;
+ right:6px;
+}
+
+.smallSearch form input {
+ padding:16.5px 31px 16.5px 50px;
+}
+}
+
+@media screen and (max-width:340px) {
+ .smallSearch form input {
+ padding:16.5px 31px 16.5px 35px;
+}
+ 
+ .smallSearch form button {
+ position:absolute;
+ top:20px;
+ left:0px;
+}
+
+.smallSearch form #fAngT {
+ position:absolute;
+ top:20px;
+ left:17px;
+}
+}
+
+@media screen and (max-width:319px) {
+ .smallSearch form .fAngDT a {
+ padding:8px 10px;
+}
+}
+
+@media screen and (max-width:1199px) {
+ .topNav .topNavContainer {
+ max-width:970px;
+ margin:auto;
+ padding:0px 15px;
+ }
+}
+
+@media screen and (max-width:991px) {
+ .topNav .topNavContainer {
+ max-width:970px;
+ margin:auto;
+ padding:0px 15px;
+ display:none;
+ }
+ 
+ .topNav {
+  padding:0px 15px;
+ }
+ 
+ .topNav .smallNav {
+ display:block;
+}
+}
+
+
+
+
+.fullScreen {
+ height: 100%;
+ width: 0%;
+ position: fixed;
+ z-index: 9999;
+ top: 0px;
+ left: 0px;
+ right:0px;
+ background-color: white;
+ overflow-x: hidden;
+ transition: 0.3s;
+ padding:0px;
+}
+
+.fullScreen .fullInner {
+ padding:12.5px 0px;
+ background-color:white;
+ text-align:center;
+ position:relative;
+}
+
+.fullScreen .fullInner a {
+ text-decoration:none;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+}
+
+.fullScreen .fullInner a img {
+ width:106px;
+ height:30px;
+}
+
+.fullScreen .fullInner #overClose {
+ text-decoration:none;
+ display:inline-block;
+ color:#6fda44;
+ margin:0px;
+ padding:0px;
+ position:absolute;
+ top:10px;
+ right:0px;
+}
+
+.fullScreen .fullInner #overClose i {
+ font-size:35px;
+ font-weight:bold;
+}
+
+.fullScreen form {
+ display:block;
+ max-width:720px;
+ margin:10px auto;
+ padding:0px;
+ position:relative;
+}
+
+.fullScreen form input {
+ margin:0px;
+ padding:12.5px 19px 12.5px 49px;
+ width:100%;
+ border:none;
+ outline:none;
+ background-color:white;
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ color:#9a9a9a;
+ border:1px solid #e0e0e0;
+ border-radius:2px;
+ border-top-left-radius:0px;
+ border-bottom-left-radius:0px;
+}
+
+.fullScreen form input::placeholder {
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ color:#9a9a9a;
+}
+
+.fullScreen form input:hover {
+ box-shadow:inset 0 0 5px rgba(0,0,0,.3);
+ border-color:#008329;
+}
+
+.fullScreen form input:focus {
+ box-shadow:inset 0 0 5px rgba(0,0,0,.3);
+ border-color:#008329;
+}
+
+.fullScreen form button {
+ border:none;
+ outline:none;
+ background-color:transparent;
+ font-size:18px;
+ line-height:18px;
+ color:#6fda44;
+ position:absolute;
+ top:13px;
+ left:10px;
+ transition:0.3s;
+} 
+
+.fullScreen form button:hover {
+ color:#6fda44;
+ border:none;
+ outline:none;
+}
+
+.fullScreen form #ovrSear {
+ text-decoration:none;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ font-size:14px;
+ line-height:14px;
+ position:absolute;
+ top:15px;
+ left:30px;
+ color:#6fda44;
+}
+
+.fullScreen form #ovrSear:hover {
+ text-decoration:none;
+ display:inline-block;
+ color:#6fda44;
+}
+
+.fullScreen form .ovrBlock {
+ display:block;
+ width:96%;
+ position:absolute;
+ top:43px;
+ left:2%;
+ right:2%;
+ padding:7px 0px;
+ box-shadow:0 6px 12px rgba(0,0,0,.175);
+ border-radius:2px;
+ display:none;
+ transition:0.3s;
+ background-color:white;
+ z-index:9999;
+}
+
+.fullScreen form .ovrBlock a {
+ text-decoration:none;
+ display:block;
+ padding:15px 20px;
+ font-size:12px;
+ font-weight:bold;
+ line-height:12px;
+ letter-spacing:1px;
+ border-left:3px solid transparent;
+ color:#6fda44;
+ transition:0.3s;
+}
+
+.fullScreen form .ovrBlock #ovrB {
+ border-left:3px solid #6fda44;
+}
+
+.fullScreen form .ovrBlock:hover #ovrB {
+ border-left:3px solid transparent;
+}
+
+.fullScreen form .ovrBlock #ovrB:hover {
+ border-left:3px solid #6fda44;
+}
+
+.fullScreen form .ovrBlock a:hover {
+ text-decoration:none;
+ display:block;
+ background-color:#f9f9f9;
+ color:#6fda44;
+ border-left:3px solid #6fda44;
+}
+
+.fullScreen .ovrRow {
+ max-width:720px;
+ margin:auto;
+}
+
+.fullScreen .ovrRow .fCol {
+ padding-left:0px;
+}
+
+.fullScreen .ovrRow .fCol a {
+ text-decoration:none;
+ display:block;
+ margin:0px;
+ padding:20px 0px;
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ color:#222;
+ border-top:1px solid #e0e0e0;
+ transition:0.3s;
+}
+
+.fullScreen .ovrRow .fCol a:hover {
+ text-decoration:none;
+ display:block;
+ color:#6fda44;
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop {
+ display:none;
+ transition:0.3s;
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop a i {
+ display:inline-block;
+ float:right;
+ font-size:25px;
+ color:#6fda44;
+ margin:-7px 9px 0px 0px;
+ transition:0.3s;
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop a i:hover {
+ transform:rotate(-180deg);
+}
+
+.filip {
+ transform:rotate(-180deg);
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop .ovrDropC {
+ display:none;
+ transition:0.3s;
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop .ovrDropC h6 {
+ font-size:14px;
+ font-weight:bold;
+ line-height:14px;
+ color:#222;
+ margin:0px;
+ padding:10px 0px;
+}
+
+.fullScreen .ovrRow .fCol .ovrDropC a {
+ border:none;
+ padding:10px 20px;
+ font-size:12px;
+}
+
+.fullScreen .ovrRow .fCol .ovrDropC a:hover {
+ text-decoration:none;
+ color:#6fda44;
+}
+
+.fullScreen .ovrRow .sCol {
+ margin-top:9px;
+ padding-right:0px;
+}
+
+.fullScreen .ovrRow .sCol h5 {
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ color:#222;
+ padding:20px 0px 15px;
+ border-top:1px solid #e0e0e0;
+ margin:0px;
+ letter-spacing:1px;
+}
+
+.fullScreen .ovrRow .sCol .ovrDropC h6 {
+ font-size:14px;
+ font-weight:bold;
+ line-height:14px;
+ color:#222;
+ margin:0px;
+ padding:10px 0px;
+}
+
+.fullScreen .ovrRow .sCol .ovrDropC a {
+ text-decoration:none;
+ display:block;
+ border:none;
+ padding:10px 20px;
+ font-size:12px;
+ line-height:12px;
+ font-weight:bold;
+ color:#222;
+}
+
+.fullScreen .ovrRow .sCol .ovrDropC a:hover {
+ text-decoration:none;
+ color:#6fda44;
+}
+
+.fullScreen .bFix {
+ padding:20px 0px;
+ text-align:center;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ right:0px;
+ background-color:#f9f9f9;
+ box-shadow:0 -1px 6px 0 rgba(0,0,0,.3);
+ width:100%;
+ height:80px;
+}
+
+.complicated {
+ margin-bottom:-295px;
+}
+
+.fullScreen .bFix a {
+ text-decoration:none;
+ display:inline-block;
+ font-size:14px;
+ line-height:14px;
+ font-weight:bold;
+ letter-spacing:0px;
+ background-color:#37a000;
+ color:#ffffff;
+ padding:11px 28px;
+ text-align:center;
+ vertical-align:middle;
+ border:2px solid transparent;
+ border-radius:2px;
+ user-select:none;
+ box-shadow:0px 1px 6px rgba(57,73,76,.35);
+}
+
+
+@media screen and (min-width:992px) {
+ .fullScreen {
+  display:none;
+  padding:0px;
+ }
+}
+
+@media screen and (max-width:767px) {
+ .fullScreen form {
+ display:block;
+ max-width:432px;
+ margin:10px auto;
+}
+.fullScreen form input {
+ padding:11.5px 19px 11.5px 45px;
+}
+
+.fullScreen .ovrRow .fCol {
+ padding:0px;
+}
+
+.fullScreen .ovrRow {
+ display:block;
+ max-width:432px;
+ margin:auto;
+ margin-top:20px;
+}
+
+.fullScreen .ovrRow .sCol {
+ display:none;
+}
+
+.fullScreen .ovrRow .fCol .ovrDrop {
+ display:block;
+}
+}
+
+@media screen and (max-width:425px) {
+ .fullScreen .fullInner #overClose {
+ position:absolute;
+ top:10px;
+ right:-5px;
+}
+
+.fullScreen .fullInner #overClose i {
+ font-size:35px;
+}
+
+.fullScreen form .ovrBlock {
+ width:100%;
+ position:absolute;
+ top:43px;
+ left:0px;
+ right:0px;
+}
+}
+
+@media screen and (max-width:280px) {
+ .fullScreen form input {
+ padding:11.5px 25px 11.5px 45px;
+}
+
+.fullScreen form .ovrBlock a {
+ letter-spacing:0px;
+ padding-left:15px;
+}
+}
